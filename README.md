@@ -30,7 +30,7 @@ npm install --save mina-lazy-image
    }
    ```
 
-1. WXML 文件中引用 mina-lazy-image
+3. WXML 文件中引用 mina-lazy-image
 
    ```xml
    <mina-lazy-image src="{{src}}" mode="widthFIx" image-class="custom-class-name"/>
