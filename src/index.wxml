@@ -1,0 +1,4 @@
+<view class="lazy-image-comp image-container-class">
+    <image wx:if="{{showed}}" style="{{styles}}" class="final-image image-class" src="{{src}}" mode="{{mode}}" webp="{{webp}}" show-menu-by-longpress="{{showMenuByLongpress}}" bindload="onLoad" binderror="onError" />
+    <image wx:else="{{placeholder}}" style="{{styles}}" src="{{placeholder}}" mode="{{mode}}" webp="{{webp}}" class="preview-image image-class" />
+</view>

@@ -1,0 +1,15 @@
+@keyframes animateShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.lazy-image-comp .final-image {
+  animation: 0.5s animateShow forwards;
+}
+.lazy-image-comp .preview-image {
+  background-color: #eee;
+  width: 100%;
+}
