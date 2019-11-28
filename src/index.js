@@ -16,6 +16,12 @@ Component({
     this.clean()
   },
 
+  pageLifetimes: {
+    show() {
+      this.addObserver()
+    }
+  },
+
   properties: {
     src: {
       type: String,
@@ -70,8 +76,8 @@ Component({
           showed: true
         })
       }
-      if (this.observer) {
-        return false
+      if (this.observer || this.data.showed) {
+        return
       }
       try {
         const observer = this.createIntersectionObserver()
@@ -84,12 +90,10 @@ Component({
             this.clean()
           })
         this.observer = observer
-        return true
       } catch (e) {
         this.setData({
           showed: true
         })
-        return false
       }
     }
   }
